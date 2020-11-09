@@ -4,11 +4,13 @@
 
 # Python 8.6
 
-# Open CV
-## $ pip install opencv-python
+# Required packages
 
-# TensorFlow 
-## $ pip install tensorflow
+## Open CV
+### $ pip install opencv-python
 
-# numpy 
-## $ pip install numpy
+## TensorFlow 
+### $ pip install tensorflow
+
+## numpy 
+### $ pip install numpy
