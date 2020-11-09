@@ -2,5 +2,6 @@
     "python.pythonPath": "C:\\Users\\bucks\\AppData\\Local\\Programs\\Python\\Python38\\python.exe",
     "python.linting.pylintEnabled": false,
     "python.linting.mypyEnabled": true,
-    "python.linting.enabled": true
+    "python.linting.enabled": true,
+    "git.ignoreLimitWarning": true
 }
