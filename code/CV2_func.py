@@ -6,7 +6,7 @@ numFaceHits = 0
 numDoubles = 0
 
 ### function for reading in files of specified path ###
-def FileRead(fileDir, faceCas):
+def FindFace(fileDir, faceCas, waitTime):
     global numFaces
     global numFaceHits
     global numDoubles
@@ -31,4 +31,4 @@ def FileRead(fileDir, faceCas):
                     numDoubles += 1
                 
             cv2.imshow("output", img)
-            cv2.waitKey(1)
+            cv2.waitKey(waitTime)
