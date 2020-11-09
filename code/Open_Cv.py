@@ -6,7 +6,7 @@ import time
 ### Take in relative path ###
 
 #fileDir = input("input file Directory: ")
-fileDir = "images"
+fileDir = input("input directory of images: ")
 
 ### get start time of program run for runtime analysis ###
 start_time = time.time()
