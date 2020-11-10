@@ -1,4 +1,3 @@
-#%%
 import cv2 
 import CV2_func
 import numpy as np
@@ -23,14 +22,6 @@ numDoubles = CV2_func.numDoubles
 numFaceMiss = numFaces - numFaceHits        # did not detect a face at all (not allowed in this set)
 numErrors = numFaceMiss + numDoubles        # did not detect a face or had multiple hits (not allowed in this set)
 errorPercent = (numErrors / numFaces)*100
-
-x = np.arange(21)
-y = np.zeros(21, np.int32)
-y[0] = errorPercent
-
-plt.figure()
-plt.plot(x,y)
-plt.show()
 
 print("Number of Faces  : ", numFaces)
 print("Number of Misses : ", numFaceMiss)
