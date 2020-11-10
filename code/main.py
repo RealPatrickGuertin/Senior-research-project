@@ -5,7 +5,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import time
 
-
 ### Take in relative path ###
 #fileDir_1 = input("input directory of images: ")
 fileDir_1 = "Resources/Images/Set_1"
@@ -39,7 +38,3 @@ print("Number of Doubles: ", numDoubles)
 print("Number of Errors : ", numErrors)
 print("Total Error %    : ", errorPercent, "%")
 print("Time Elapsed     : ",  end_time)
-
-
-
-# %%
