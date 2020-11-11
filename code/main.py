@@ -39,11 +39,13 @@ for set_i in sets:
     numErrors.append(numFaceMiss[it] + numDoubles[it])       # did not detect a face or had multiple hits (not allowed in this set)
     errorPercent.append((numErrors[it] / numFaces[it])*100)
 
-    print("Number of Faces  : ", numFaces)
-    print("Number of Misses : ", numFaceMiss)
-    print("Number of Doubles: ", numDoubles)
-    print("Number of Errors : ", numErrors)
-    print("Total Error %    : ", errorPercent, "%")
-    print("Time Elapsed     : ",  end_time)
+    print("-------------------------------------")
+    print("Number of Faces  : ", numFaces[it])
+    print("Number of Misses : ", numFaceMiss[it])
+    print("Number of Doubles: ", numDoubles[it])
+    print("Number of Errors : ", numErrors[it])
+    print("Total Error %    : ", errorPercent[it], "%")
+    print("Time Elapsed     : ",  runtimes[it])
+    print("-------------------------------------")
 
     it += 1
