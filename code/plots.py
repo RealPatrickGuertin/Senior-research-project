@@ -1,14 +1,21 @@
 import main
-import CV2_func
 import numpy as np
 import matplotlib.pyplot as plt
 
-x = np.arange(0, 21,None, np.int32)
-y = np.zeros(21, np.double)
-y[0] = main.errorPercent
+x = np.arange(1, 11,None, np.int32)
+y = np.zeros(10, np.double)
+plots = [main.errorPercent, main.runtimes]
 
-plt.figure()
-plt.xticks(x)
-plt.ylim(0,100)
-plt.plot(x,y)
-plt.show()
+for plot in plots:
+    it = 0
+    for i in plot:
+        y[it] = i
+        it += 1
+
+    plt.figure()
+    plt.xticks(x)
+    plt.xlabel("Sets")
+    plt.ylim(0,max(y))
+    plt.ylabel("Percent Error")
+    plt.plot(x,y)
+    plt.show()
