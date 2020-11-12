@@ -14,3 +14,6 @@
 
 ## numpy 
 ### $ pip install numpy
+
+## mathLibPlot
+### $ pip install matplotlib
