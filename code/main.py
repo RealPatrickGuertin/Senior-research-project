@@ -30,7 +30,6 @@ for set_i in sets:
     start_time = time.time()
     CV2_func.FindFace(set_i, faceCascade_1, waitTime)
     end_time = time.time() - start_time
-    runtimes.append(end_time)
 
     ### Values for error analysis ###
     numFaces.append(CV2_func.numFaces)
@@ -38,7 +37,12 @@ for set_i in sets:
     numDoubles.append(CV2_func.numDoubles)
     numFaceMiss.append(numFaces[it] - numFaceHits[it])       # did not detect a face at all (not allowed in this set)
     numErrors.append(numFaceMiss[it] + numDoubles[it])       # did not detect a face or had multiple hits (not allowed in this set)
-    errorPercent.append((numErrors[it] / numFaces[it])*100)
+    if numFaces[it] != 0:
+        runtimes.append((end_time/CV2_func.numFaces)*1000)
+        errorPercent.append((numErrors[it] / numFaces[it])*100)
+    else:
+        runtimes.append(0)
+        errorPercent.append(0)
 
     print("-------------------------------------")
     print("Number of Faces  : ", numFaces[it])
@@ -49,4 +53,7 @@ for set_i in sets:
     print("Time Elapsed     : ",  runtimes[it])
     print("-------------------------------------")
 
+    CV2_func.numFaces = 0
+    CV2_func.numFaceHits = 0
+    CV2_func.numDoubles = 0
     it += 1
