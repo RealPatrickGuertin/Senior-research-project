@@ -10,6 +10,9 @@ def FindFace(fileDir, faceCas, waitTime):
     global numFaces
     global numFaceHits
     global numDoubles
+    numfaces = 0
+    numFaceHits = 0
+    numDoubles = 0
 
     for fileName in os.listdir(fileDir):
         if fileName.endswith(".jpg"):

@@ -6,12 +6,13 @@ import time
 
 ### Take in relative path ###
 #fileDir_1 = input("input directory of images: ")
-cascade = "Resources/haarcascade_frontalface_default.xml"
-fileDir_SET1 = "Resources/Images/Set_1"
-fileDir_SET2 = "Resources/Images/Set_2"
-fileDir_SET3 = "Resources/Images/Set_3"
+fileDir_SET_1 = "Resources/Images/Set_1"
+fileDir_SET_2 = "Resources/Images/Set_2"
+fileDir_SET_3 = "Resources/Images/Set_3"
+fileDir_SET_4 = "Resources/Images/Set_4"
+fileDir_SET_5 = "Resources/Images/Set_5"
 waitTime = int(input("how long should each image stay on screen in ms? (0: until manually close)"))
-faceCascade_1 = cv2.CascadeClassifier(cascade)
+faceCascade_1 = cv2.CascadeClassifier("Resources/Trained_Sets/haarcascade_frontalface_default.xml")
 
 numFaces = []
 numFaceHits = []
@@ -20,7 +21,7 @@ numFaceMiss = []
 numErrors = []
 errorPercent = []
 runtimes = []
-sets = [fileDir_SET1, fileDir_SET2, fileDir_SET3]
+sets = [fileDir_SET_1, fileDir_SET_2, fileDir_SET_3, fileDir_SET_4, fileDir_SET_5]
 
 ### Loop through the sets of images
 it = 0
