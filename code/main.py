@@ -1,7 +1,6 @@
 import cv2 
 import CV2_func
 import numpy as np
-import matplotlib.pyplot as plt
 import time
 
 ### Take in relative path ###
@@ -10,9 +9,9 @@ fileDir_SET_1 = "Resources/Images/Set_1"
 fileDir_SET_2 = "Resources/Images/Set_2"
 fileDir_SET_3 = "Resources/Images/Set_3"
 fileDir_SET_4 = "Resources/Images/Set_4"
-fileDir_SET_5 = "Resources/Images"
+#fileDir_SET_5 = "Resources/Images"
 waitTime = int(input("how long should each image stay on screen in ms? (0: until manually close)"))
-faceCascade_1 = cv2.CascadeClassifier("Resources/Trained_Sets/haarcascade_frontalface_default.xml")
+faceCascade_1 = cv2.CascadeClassifier("Resources/Trained_Sets/cascade.xml")
 
 numFaces = []
 numFaceHits = []
@@ -21,7 +20,7 @@ numFaceMiss = []
 numErrors = []
 errorPercent = []
 runtimes = []
-sets = [fileDir_SET_1, fileDir_SET_2, fileDir_SET_3, fileDir_SET_4, fileDir_SET_5]
+sets = [fileDir_SET_1, fileDir_SET_2, fileDir_SET_3, fileDir_SET_4]
 
 ### Loop through the sets of images
 it = 0
