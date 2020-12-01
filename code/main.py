@@ -4,21 +4,20 @@ import numpy as np
 import time
 
 ### Take in relative path ###
-#fileDir_1 = input("input directory of images: ")
 fileDir_SET_1 = "Resources/Images/Set_1"
 fileDir_SET_2 = "Resources/Images/Set_2"
 fileDir_SET_3 = "Resources/Images/Set_3"
-fileDir_SET_4 = "Resources/Images"
+fileDir_SET_4 = "Resources/Images/Set_4"
 
-trainedSet_1 = "Resources/Trained_Sets/haarcascade_frontalface_default.xml"
-trainedSet_2 = "Resources/Trained_Sets/cascade_1.xml"
+trainedSet_0 = "Resources/Trained_Sets/haarcascade_frontalface_default.xml"
+trainedSet_1 = "Resources/Trained_Sets/cascade_1.xml"
 trainedSet_2 = "Resources/Trained_Sets/cascade_2.xml"
 trainedSet_3 = "Resources/Trained_Sets/cascade_3.xml"
 trainedSet_4 = "Resources/Trained_Sets/cascade_4.xml"
 
 waitTime = int(input("how long should each image stay on screen in ms? (0: until manually close)"))
 faceCascade = cv2.CascadeClassifier(trainedSet_1)
-sets = [fileDir_SET_1, fileDir_SET_2, fileDir_SET_3, fileDir_SET_4]
+sets = [fileDir_SET_1, fileDir_SET_2, fileDir_SET_3]
 
 numFaces = []
 numFaceHits = []
