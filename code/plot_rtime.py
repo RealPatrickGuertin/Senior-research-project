@@ -3,8 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math
 
-x = np.arange(1, 6,None, np.int32)
-y = np.zeros(5, np.double)
+x = np.arange(1, 5,None, np.int32)
+y = np.zeros(4, np.double)
 
 it = 0
 for i in main.runtimes:
