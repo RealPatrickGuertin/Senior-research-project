@@ -10,8 +10,14 @@ fileDir_SET_2 = "Resources/Images/Set_2"
 fileDir_SET_3 = "Resources/Images/Set_3"
 fileDir_SET_4 = "Resources/Images"
 
+trainedSet_1 = "Resources/Trained_Sets/haarcascade_frontalface_default.xml"
+trainedSet_2 = "Resources/Trained_Sets/cascade_1.xml"
+trainedSet_2 = "Resources/Trained_Sets/cascade_2.xml"
+trainedSet_3 = "Resources/Trained_Sets/cascade_3.xml"
+trainedSet_4 = "Resources/Trained_Sets/cascade_4.xml"
+
 waitTime = int(input("how long should each image stay on screen in ms? (0: until manually close)"))
-faceCascade_1 = cv2.CascadeClassifier("Resources/Trained_Sets/haarcascade_frontalface_default.xml")
+faceCascade = cv2.CascadeClassifier(trainedSet_1)
 sets = [fileDir_SET_1, fileDir_SET_2, fileDir_SET_3, fileDir_SET_4]
 
 numFaces = []
@@ -22,13 +28,12 @@ numErrors = []
 errorPercent = []
 runtimes = []
 
-
 ### Loop through the sets of images
 it = 0
 for set_i in sets:
     ### get start and end time of program run for runtime analysis ###
     start_time = time.time()
-    CV2_func.FindFace(set_i, faceCascade_1, waitTime)
+    CV2_func.FindFace(set_i, faceCascade, waitTime)
     end_time = time.time() - start_time
 
     ### Values for error analysis ###
