@@ -16,7 +16,7 @@ trainedSet_3 = "Resources\Trainer\T_Set_3\classifier\cascade.xml"
 trainedSet_4 = "Resources\Trainer\T_Set_4\classifier\cascade.xml"
 
 waitTime = int(input("how long should each image stay on screen in ms? (0: until manually close)"))
-faceCascade = cv2.CascadeClassifier(trainedSet_0)
+faceCascade = cv2.CascadeClassifier(trainedSet_3)
 sets = [fileDir_SET_1, fileDir_SET_2, fileDir_SET_3]
 
 numFaces = []
