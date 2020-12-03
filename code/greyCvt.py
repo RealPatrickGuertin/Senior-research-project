@@ -5,8 +5,8 @@ import os,glob
 from os import listdir,makedirs
 
 from os.path import isfile,join
-path = 'Resources\Images\Set_4' # Source Folder
-dstpath = 'Resources/Trainer/T_Set_4/p' # Destination Folder
+path = 'Resources\Images\Set_3' # Source Folder
+dstpath = 'Resources/Trainer/T_Set_3/p' # Destination Folder
 try:
     makedirs(dstpath)
 except:
