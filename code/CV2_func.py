@@ -25,9 +25,9 @@ def FindFace(fileDir, faceCas, waitTime):
                 numRuns += 1
                 cv2.rectangle(img, (x,y), (x+w, y+h), (255, 0, 0), 2)
                 
-                if(numRuns == 1 or numRuns == 2):
+                if(numRuns == 1):
                     numFaceHits += 1
-                elif(numRuns == 3):
+                elif(numRuns == 2):
                     numDoubles += 1
                 
             cv2.imshow("output", img)

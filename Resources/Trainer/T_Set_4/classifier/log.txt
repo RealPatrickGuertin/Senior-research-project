@@ -3010,7 +3010,7 @@ NEG current samples: 305
 NEG current samples: 306
 NEG count : acceptanceRatio    306 : 1
 
-Precalculation time: 21.775
+Precalculation time: 21.248
 
 +----+---------+---------+
 |  N |    HR   |    FA   |
@@ -3059,6 +3059,7 @@ Training until now has taken 0 days 0 hours 4 minutes 11 seconds.
 
 ===== TRAINING 1-stage =====
 <BEGIN
+
 POS current samples: 1
 POS current samples: 2
 POS current samples: 3
