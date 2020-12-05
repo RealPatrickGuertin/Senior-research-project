@@ -9,14 +9,14 @@ fileDir_SET_2 = "Resources/Images/Set_2"
 fileDir_SET_3 = "Resources/Images/Set_3"
 fileDir_SET_4 = "Resources/Images/Set_4"
 
-trainedSet_0 = "Resources/Trained_Sets/haarcascade_frontalface_default.xml"
+trainedSet_0 = "Resources\Trainer\haarcascade_frontalface_default.xml"
 trainedSet_1 = "Resources\Trainer\T_Set_1\classifier\cascade.xml"
 trainedSet_2 = "Resources\Trainer\T_Set_2\classifier\cascade.xml"
 trainedSet_3 = "Resources\Trainer\T_Set_3\classifier\cascade.xml"
 trainedSet_4 = "Resources\Trainer\T_Set_4\classifier\cascade.xml"
 
 waitTime = int(input("how long should each image stay on screen in ms? (0: until manually close)"))
-faceCascade = cv2.CascadeClassifier(trainedSet_2)
+faceCascade = cv2.CascadeClassifier(trainedSet_0)
 sets = [fileDir_SET_1, fileDir_SET_2, fileDir_SET_3]
 
 numFaces = []
@@ -54,7 +54,7 @@ for set_i in sets:
     print("Number of Doubles: ", numDoubles[it])
     print("Number of Errors : ", numErrors[it])
     print("Total Error %    : ", errorPercent[it], "%")
-    print("Time Elapsed     : ",  runtimes[it])
+    print("Adverage Runtime : ",  runtimes[it])
     print("-------------------------------------")
 
     CV2_func.numFaces = 0
