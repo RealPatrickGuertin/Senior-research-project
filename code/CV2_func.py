@@ -29,6 +29,6 @@ def FindFace(fileDir, faceCas, waitTime):
                     numFaceHits += 1
                 elif(numRuns == 2):
                     numDoubles += 1
-                
+                #wufwu
             cv2.imshow("output", img)
             cv2.waitKey(waitTime)
